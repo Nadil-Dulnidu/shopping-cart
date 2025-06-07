@@ -1,8 +1,8 @@
 package com.shoppingcart.root.mapper;
 
 import com.shoppingcart.root.entity.CartEntity;
-import com.shoppingcart.root.modal.Cart;
-import com.shoppingcart.root.modal.CartItem;
+import com.shoppingcart.root.dto.Cart;
+import com.shoppingcart.root.dto.CartItem;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,5 @@
 package com.shoppingcart.root.security;
 
-import com.shoppingcart.root.util.JwtUtil;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

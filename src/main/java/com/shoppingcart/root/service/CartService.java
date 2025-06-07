@@ -1,6 +1,6 @@
 package com.shoppingcart.root.service;
 
-import com.shoppingcart.root.modal.Cart;
+import com.shoppingcart.root.dto.Cart;
 import org.springframework.stereotype.Service;
 
 @Service

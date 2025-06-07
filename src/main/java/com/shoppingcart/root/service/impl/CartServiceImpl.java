@@ -2,7 +2,7 @@ package com.shoppingcart.root.service.impl;
 
 import com.shoppingcart.root.entity.CartEntity;
 import com.shoppingcart.root.mapper.CartDTOEntityMapper;
-import com.shoppingcart.root.modal.Cart;
+import com.shoppingcart.root.dto.Cart;
 import com.shoppingcart.root.repository.CartRepository;
 import com.shoppingcart.root.service.CartService;
 import org.springframework.beans.factory.annotation.Autowired;

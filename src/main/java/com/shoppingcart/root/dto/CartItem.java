@@ -1,5 +1,6 @@
-package com.shoppingcart.root.modal;
+package com.shoppingcart.root.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
@@ -11,6 +12,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class CartItem {
     @JsonProperty("product_id")
     @NotBlank(message = "product id can not be null")

@@ -1,4 +1,4 @@
-package com.shoppingcart.root.modal;
+package com.shoppingcart.root.dto;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;

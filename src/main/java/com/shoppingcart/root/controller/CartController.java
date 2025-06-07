@@ -1,8 +1,8 @@
 package com.shoppingcart.root.controller;
 
 import com.shoppingcart.root.security.AuthContext;
-import com.shoppingcart.root.modal.Cart;
-import com.shoppingcart.root.modal.CartItem;
+import com.shoppingcart.root.dto.Cart;
+import com.shoppingcart.root.dto.CartItem;
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;

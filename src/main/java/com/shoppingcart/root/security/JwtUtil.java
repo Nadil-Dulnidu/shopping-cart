@@ -1,4 +1,4 @@
-package com.shoppingcart.root.util;
+package com.shoppingcart.root.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
