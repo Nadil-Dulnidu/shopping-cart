@@ -4,6 +4,7 @@ import com.shoppingcart.root.security.AuthContext;
 import com.shoppingcart.root.dto.Cart;
 import com.shoppingcart.root.dto.CartItem;
 import com.shoppingcart.root.service.CartService;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +23,7 @@ public class CartController {
     CartService cartService;
 
     @PostMapping("/add")
-    public ResponseEntity<?> addToCart(@RequestBody CartItem item, HttpSession session){
+    public ResponseEntity<?> addToCart(@RequestBody CartItem item, HttpSession session, HttpServletRequest request){
         String username = AuthContext.getAuthUsername();
         if(username != null){
             final Boolean isExistsProduct = cartService.isExistsProduct(item.getProductId());
@@ -30,7 +31,7 @@ public class CartController {
                 Cart UpdatedCart = cartService.updateProductQuantity(item.getProductId(),item);
                 return ResponseEntity.ok().body(UpdatedCart);
             }
-            final Cart savedCart = cartService.addToCart(item);
+            final Cart savedCart = cartService.addToCart(item,username,request);
             return ResponseEntity.ok().body(savedCart);
         }else{
             Cart cart = (Cart) session.getAttribute("guestCart");
